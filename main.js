@@ -6,45 +6,62 @@
 
 // Pattern 1
 // window.onload = function () {
-//   let outstr = '';
-//   console.log = function (...args) {
-//     outstr += args.map((arg) => arg.toString()).join(' ') + '<br>';
-//   };
+//   let outputHtml = '';
 
 //   for (let i = 1; i < 101; i++) {
+//     let output = '';
 //     if (i % 15 === 0) {
-//       console.log('FizzBuzz');
+//       output += 'FizzBuzz';
 //     } else if (i % 5 === 0) {
-//       console.log('Buzz');
+//       output += 'Buzz';
 //     } else if (i % 3 === 0) {
-//       console.log('Fizz');
+//       output += 'Fizz';
 //     } else {
-//       console.log(i);
+//       output += i.toString();
 //     }
+//     console.log(output);
+//     outputHtml += output + '<br>';
 //   }
-//   document.getElementById('console').innerHTML = outstr;
+//   document.getElementById('console').innerHTML = outputHtml;
 // };
 
-// Pattern 2
+// Pattern 2 １５の倍数についての記述なし
+
+// window.onload = function () {
+//   let outputHtml = '';
+
+//   for (let i = 1; i < 101; i++) {
+//     let output = '';
+//     if (i % 5 === 0) {
+//       output += 'Buzz';
+//     }
+//     if (i % 3 === 0) {
+//       output += 'Fizz';
+//     }
+//     if (output === '') {
+//       output += i.toString();
+//     }
+//     console.log(output);
+//     outputHtml += output + '<br>';
+//   }
+//   document.getElementById('console').innerHTML = outputHtml;
+// };
+
+// Pattern 3
 
 window.onload = function () {
-  let outstr = '';
-  console.log = function (...args) {
-    outstr += args.map((arg) => arg.toString()).join(' ') + '<br>';
-  };
-
+  let outputHtml = '';
   for (let i = 1; i < 101; i++) {
-    let output = '';
-    if (i % 5 === 0) {
-      output += 'Buzz';
-    }
-    if (i % 3 === 0) {
-      output += 'Fizz';
-    }
-    if (output === '') {
-      output += i;
-    }
+    let output =
+      i % 15 === 0
+        ? 'FizzBuzz'
+        : i % 3 === 0
+        ? 'Fizz'
+        : i % 5 === 0
+        ? 'Buzz'
+        : i.toString();
     console.log(output);
+    outputHtml += output + '<br>';
   }
-  document.getElementById('console').innerHTML = outstr;
+  document.getElementById('console').innerHTML = outputHtml;
 };
