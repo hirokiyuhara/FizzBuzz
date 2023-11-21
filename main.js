@@ -5,25 +5,25 @@
 // ４．数字が15の倍数のときは数字の代わりに「FizzBuzz」と表示する
 
 // Pattern 1
-// window.onload = function () {
-//   let outputHtml = '';
+window.onload = function () {
+  let outputHtml = '';
 
-//   for (let i = 1; i < 101; i++) {
-//     let output = '';
-//     if (i % 15 === 0) {
-//       output += 'FizzBuzz';
-//     } else if (i % 5 === 0) {
-//       output += 'Buzz';
-//     } else if (i % 3 === 0) {
-//       output += 'Fizz';
-//     } else {
-//       output += i.toString();
-//     }
-//     console.log(output);
-//     outputHtml += output + '<br>';
-//   }
-//   document.getElementById('console').innerHTML = outputHtml;
-// };
+  for (let i = 1; i < 101; i++) {
+    let output = '';
+    if (i % 15 === 0) {
+      output += 'FizzBuzz';
+    } else if (i % 5 === 0) {
+      output += 'Buzz';
+    } else if (i % 3 === 0) {
+      output += 'Fizz';
+    } else {
+      output += i.toString();
+    }
+    console.log(output);
+    outputHtml += output + '<br>';
+  }
+  document.getElementById('console').innerHTML = outputHtml;
+};
 
 // Pattern 2 １５の倍数についての記述なし
 
@@ -49,19 +49,26 @@
 
 // Pattern 3
 
-window.onload = function () {
-  let outputHtml = '';
-  for (let i = 1; i < 101; i++) {
-    let output =
-      i % 15 === 0
-        ? 'FizzBuzz'
-        : i % 3 === 0
-        ? 'Fizz'
-        : i % 5 === 0
-        ? 'Buzz'
-        : i.toString();
-    console.log(output);
-    outputHtml += output + '<br>';
-  }
-  document.getElementById('console').innerHTML = outputHtml;
-};
+// window.onload = function () {
+//   let outputHtml = '';
+//   for (let i = 1; i < 101; i++) {
+//     let output =
+//       i % 15 === 0
+//         ? 'FizzBuzz'
+//         : i % 3 === 0
+//         ? 'Fizz'
+//         : i % 5 === 0
+//         ? 'Buzz'
+//         : i.toString();
+//     console.log(output);
+//     outputHtml += output + '<br>';
+//   }
+//   document.getElementById('console').innerHTML = outputHtml;
+// };
+
+// while文でのFizzBuzz
+// let num = 1;
+// while (num < 100) {
+//   console.log(num);
+//   num++;
+// }
